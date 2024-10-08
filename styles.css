@@ -1,0 +1,224 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: rgba(255, 250, 250, 0.781);
+    min-width: 440px;
+}
+.page-container {
+    width: 100%;
+    max-width: 990px;
+    min-width: 440px;
+    margin: 0 auto;
+    position: relative;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+@media (min-width: 768px) {
+    .page-container {
+        max-width: 760px;
+    }
+}
+@media (min-width: 990px) {
+    .page-container {
+        max-width: 950px;
+    }
+}
+@media (min-width: 1300px) {
+    .page-container {
+        max-width: 1250px;
+    }
+}
+@media (max-width: 440px) {
+    body, html, .page-container {
+        width: 440px;
+        min-width: 440px;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.uk-container, .red-box, .red-box-flex, nav {
+    min-width: 440px;
+}
+
+.uk-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    height: 80px;
+    margin: 0 auto;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+}
+.logo img {
+    width: 265px;
+}
+.contact-icons {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.number {
+    font-size: 15px;
+}
+.red-box { 
+    width: 100%;
+    height: 100px;
+    background-color: hsl(0, 90%, 20%);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.red-box-flex { 
+    width: 100%;
+    height: 60px;
+    background-color: hsl(0, 90%, 20%);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+nav {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-left: 50px;
+}
+nav a {
+    display: block;
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 20px 15px;
+    background-color: white;
+    position: relative;
+    white-space: nowrap;
+}
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 5px;
+    width: 100%;
+    background-color: #FFCA00;
+    transform: scaleX(0);
+}
+nav a:hover::after {
+    transform: scaleX(1);
+}
+nav a:hover {
+    background-color: hsla(0, 0%, 100%, 0.944);
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    max-width: 760px;
+    z-index: 1000;
+}
+.sticky + .content {
+    padding-top: 100px;
+}
+.hamburger {
+    display: none;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 1001;
+    background-color: white;
+    border-radius: 5px;
+}
+.hamburger div {
+    width: 30px;
+    height: 5px;
+    background-color: hsl(0, 90%, 20%);
+    margin: 4px 0;
+    transition: 0.4s;
+}
+.side-menu {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: rgba(153, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: 0.4s;
+    z-index: 1000;
+    padding-top: 60px;
+}
+.side-menu a {
+    display: block;
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+}
+.side-menu a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+.image-container {
+    width: 100%;
+    overflow: hidden;
+}
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+@media (max-width: 990px) {
+    .uk-container {
+        flex-direction: row;
+        justify-content: flex-start;
+        height: auto;
+        position: relative;
+        padding: 10px;
+    }
+    .logo {
+        margin-left: 10px;
+    }
+    .logo img {
+        width: 170px; 
+    }
+    .contact-icons {
+        display: none;  /* Hide contact information */
+    }
+    .red-box, .red-box-flex {
+        display: none;  /* Hide red box on smaller screens */
+    }
+    .hamburger {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+    .side-menu.open {
+        right: 0;
+    }
+}
+@media (min-width: 991px) {
+    .logo {
+        margin-left: 50px;
+    }
+    .logo img {
+        width: 265px;
+    }
+}

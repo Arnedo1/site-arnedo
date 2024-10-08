@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="nl-nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Professioneel schilderwerk, planmatig onderhoud, renovatie en glaszetten voor zakelijke klanten in Noord-Nederland, vanuit Oosterwolde gemeente Ooststellingwerf. Schildersgilde Friesland staat garant voor vakmanschap en service. Neem contact op voor een duurzame oplossing.">
+    <title>Houtrot Schildersbedrijf Arnedo</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: rgba(255, 250, 250, 0.781);
+            min-width: 320px;
+        }
+        .page-container {
+            width: 100%;
+            max-width: 990px;
+            margin: 0 auto;
+            position: relative;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        @media (min-width: 768px) {
+            .page-container {
+                max-width: 760px;
+            }
+        }
+        @media (min-width: 990px) {
+            .page-container {
+                max-width: 950px;
+            }
+        }
+        @media (min-width: 1300px) {
+            .page-container {
+                max-width: 1250px;
+            }
+        }
+        * {
+            box-sizing: border-box;
+        }
+        .uk-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            height: 80px;
+            margin: 0 auto;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            margin-left: 10px;
+        }
+        .logo img {
+            width: 170px;
+            max-width: 100%;
+            height: auto;
+        }
+        .contact-icons {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .number {
+            font-size: 15px;
+        }
+        .red-box { 
+            width: 100%;
+            height: 100px;
+            background-color: hsl(0, 90%, 20%);
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+        }
+        .red-box-flex { 
+            width: 100%;
+            height: 60px;
+            background-color: hsl(0, 90%, 20%);
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+        }
+        nav {
+            display: flex;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            width: 100%;
+            padding-left: 50px;
+        }
+        nav a {
+            display: block;
+            text-decoration: none;
+            color: black;
+            font-size: 15px;
+            font-weight: 700;
+            padding: 20px 15px;
+            background-color: white;
+            position: relative;
+            white-space: nowrap;
+        }
+        nav a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 5px;
+            width: 100%;
+            background-color: #FFCA00;
+            transform: scaleX(0);
+           
+        }
+        nav a:hover::after {
+            transform: scaleX(1);
+        }
+        nav a:hover {
+            background-color: hsla(0, 0%, 100%, 0.944);
+        }
+        nav a.active::after {
+            transform: scaleX(1);
+        }
+        .sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            max-width: 760px;
+            z-index: 1000;
+        }
+        .sticky + .content {
+            padding-top: 100px;
+        }
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            padding: 10px;
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1001;
+            background-color: white;
+            border-radius: 5px;
+        }
+        .hamburger div {
+            width: 30px;
+            height: 5px;
+            background-color: hsl(0, 90%, 20%);
+            margin: 4px 0;
+            transition: 0.4s;
+        }
+        .side-menu {
+            position: fixed;
+            top: 0;
+            right: -250px;
+            width: 250px;
+            height: 100%;
+            background-color: rgba(153, 0, 0, 0.6);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            transition: 0.4s;
+            z-index: 1000;
+            padding-top: 60px;
+        }
+        .side-menu a {
+            display: block;
+            padding: 15px;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+        .side-menu a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        .image-container {
+            width: 100%;
+            overflow: hidden;
+        }
+        .image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        @media (max-width: 990px) {
+            .uk-container {
+                flex-direction: row;
+                justify-content: flex-start;
+                height: auto;
+                position: relative;
+                padding: 10px;
+            }
+            .logo {
+                margin-left: 10px;
+            }
+            .logo img {
+                width: 170px; 
+                max-width: 100%;
+                height: auto;
+            }
+            .contact-icons {
+                display: none;
+            }
+            .red-box, .red-box-flex {
+                display: none;
+            }
+            .hamburger {
+                display: block;
+            }
+            .side-menu.open {
+                right: 0;
+            }
+        }
+        @media (min-width: 991px) {
+            .logo {
+                margin-left: 50px;
+            }
+            .logo img {
+                width: 265px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page-container">
+        <div class="uk-container">
+            <div class="logo">
+                <img src="images/arnedo.png" alt="ARNEDO">
+            </div>
+            <div class="contact-icons">
+                <div class="contact-item">
+                    <img src="images/telefoon.png" alt="Telefoon" style="width: 25px;">
+                    <span class="number">06-13911052</span>
+                </div>
+                <div class="contact-item">
+                    <img src="images/envelope.png" alt="Envelope" style="width: 25px;">
+                    <span class="number">info@arnedoschildersbedrijf.nl</span>
+                </div>
+            </div>
+            <div class="hamburger" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <div class="red-box">
+            <div class="red-box-flex" id="navbar">
+                <nav>
+                    <a href="home.html" >HOME</a>
+                    <a href="particulieren.html">PARTICULIEREN</a>
+                    <a href="bedrijven.html">BEDRIJVEN</a>
+                    <a href="houtrot.html"class="active">HOUTROT</a>
+                    <a href="projecten.html">PROJECTEN</a>
+                    <a href="contact.html">CONTACT</a>
+                  </nav>
+          </div>
+      </div>
+      <div class="side-menu" id="sideMenu">
+          <a href="home.html">HOME</a>
+          <a href="particulieren.html">PARTICULIEREN</a>
+          <a href="bedrijven.html">BEDRIJVEN</a>
+          <a href="houtrot.html">HOUTROT</a>
+          <a href="projecten.html">PROJECTEN</a>
+          <a href="contact.html">CONTACT</a>
+        </div>
+
+    </div>
+    <script>
+        window.onscroll = function() {stickyNav()};
+
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
+
+        function stickyNav() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        }
+
+        function toggleMenu() {
+            var sideMenu = document.getElementById("sideMenu");
+            sideMenu.classList.toggle("open");
+        }
+    </script>
+</body>
+</html>
